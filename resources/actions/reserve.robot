@@ -2,13 +2,10 @@
 Documentation    Suite description
 Library          SeleniumLibrary    # Temporario
 
-*** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
-
 *** Keywords ***
-Provided precondition
-    Setup system under test
+Selecionar o primeiro voo da lista
+    click button    class = btn.btn-small
+
+Selecionar o voo numero "${num}"
+    click button    css = tr:nth-child(${num}) .btn
+
